@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Төрсөн өдрийн урилга | Ц. Ариунзул 🎂</title>
+<!-- Cyrillic-safe fonts: Cormorant Garamond (serif display, supports Cyrillic) + Montserrat (labels) + Roboto Mono (body) -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Montserrat:wght@400;600;700;900&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pink: #F472B6;
+  --hot-pink: #EC4899;
+  --deep-pink: #DB2777;
+  --blush: #FCE7F3;
+  --sky: #BAE6FD;
+  --sky-dark: #7DD3FC;
+  --sage: #6B7C5A;
+  --sage-light: #D1DCC4;
+  --cream: #FFFBF5;
+  --warm-white: #FFF8F0;
+  --black: #1A1008;
+  --dark: #2D1B0E;
+  --gray: #7C6A5A;
+  --light-gray: #E8DDD3;
+  --yellow: #FDE68A;
+  --yellow-warm: #F59E0B;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  background: var(--sage);
+  color: var(--black);
+  overflow-x: hidden;
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* ─── OUTER FRAME (sage border like reference) ─── */
+.outer-frame {
+  background: var(--cream);
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ─── BOTTOM NAV ─── */
+nav {
+  position: fixed;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 430px;
+  background: var(--warm-white);
+  display: flex;
+  z-index: 100;
+  border-top: 2px solid var(--pink);
+  box-shadow: 0 -4px 20px rgba(244, 114, 182, 0.15);
+}
+nav a {
+  flex: 1;
+  color: #B09080;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 12px 4px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+nav a .icon { font-size: 16px; }
+nav a.active, nav a:hover { color: var(--deep-pink); }
+
+/* ─── PAGES ─── */
+.page { display: none; min-height: 100vh; padding-bottom: 80px; }
+.page.active { display: block; }
+
+/* ════════════════════════════════════
+   HOME PAGE — Magazine Editorial Collage
+════════════════════════════════════ */
+#page-home {
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Top nav bar like "BLOG UNIVERSITY" top nav */
+.mag-topbar {
+  background: var(--cream);
+  border-bottom: 1px solid var(--light-gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: var(--gray);
+  text-transform: uppercase;
+}
+.mag-topbar .logo-text {
+  font-weight: 900;
+  font-size: 10px;
+  color: var(--black);
+  letter-spacing: 1px;
+}
+
+/* Big editorial masthead */
+.masthead {
+  background: linear-gradient(180deg, #C8DDE8 0%, #B8D4E8 40%, #A8CBE5 100%);
+  position: relative;
+  overflow: visible;
+  padding-bottom: 60px;
+  margin-bottom: 0;
+}
+
+.masthead-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 68px;
+  letter-spacing: -3px;
+  line-height: 0.88;
+  color: white;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+  padding: 20px 18px 0;
+  position: relative;
+  z-index: 3;
+  mix-blend-mode: overlay;
+  opacity: 0.95;
+}
+
+.masthead-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: rgba(255,255,255,0.85);
+  padding: 8px 18px;
+  position: relative;
+  z-index: 3;
+  text-transform: uppercase;
+}
+
+/* Pink blob shape like the reference */
+.pink-blob {
+  position: absolute;
+  bottom: -60px;
+  left: -10px;
+  right: -10px;
+  height: 120px;
+  background: var(--pink);
+  border-radius: 60% 50% 0 0 / 100% 100% 0 0;
+  z-index: 2;
+  opacity: 1;
+}
+
+.pink-blob-2 {
+  position: absolute;
+  top: 40px;
+  right: -40px;
+  width: 180px;
+  height: 160px;
+  background: var(--hot-pink);
+  border-radius: 50% 60% 40% 55% / 55% 45% 65% 45%;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+/* Badge card (like the ID card in reference) */
+.badge-card {
+  position: absolute;
+  top: 18px;
+  right: 14px;
+  width: 100px;
+  background: white;
+  border-radius: 8px;
+  padding: 10px 8px;
+  box-shadow: 3px 3px 12px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05);
+  z-index: 10;
+  transform: rotate(6deg);
+  font-family: 'Montserrat', sans-serif;
+}
+.badge-card-top {
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--gray);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  line-height: 1.3;
+  color: var(--deep-pink);
+}
+.badge-photo {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--blush), var(--sky));
+  border-radius: 4px;
+  margin: 0 auto 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+.badge-name {
+  font-size: 7px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--black);
+  letter-spacing: 0.5px;
+}
+.badge-date {
+  font-size: 6px;
+  color: var(--gray);
+  text-align: center;
+  margin-top: 2px;
+}
+.badge-lanyard {
+  width: 3px;
+  height: 20px;
+  background: var(--sky-dark);
+  margin: -2px auto 0;
+  border-radius: 2px;
+}
+
+/* Sticky note style text cards (from reference) */
+.sticky-note {
+  background: white;
+  padding: 10px 12px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 9px;
+  line-height: 1.5;
+  color: var(--dark);
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.08);
+  border-left: 3px solid var(--pink);
+  position: relative;
+}
+
+/* Main content area with editorial layout */
+.home-editorial {
+  position: relative;
+  z-index: 5;
+  padding: 20px 18px;
+  margin-top: 0;
+}
+
+.editorial-headline-wrap {
+  background: var(--pink);
+  padding: 24px 18px;
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 98% 100%, 96% 88%, 93% 100%, 90% 88%, 87% 100%, 84% 88%, 81% 100%, 78% 88%, 75% 100%, 72% 88%, 69% 100%, 66% 88%, 63% 100%, 60% 88%, 57% 100%, 54% 88%, 51% 100%, 48% 88%, 45% 100%, 42% 88%, 39% 100%, 36% 88%, 33% 100%, 30% 88%, 27% 100%, 24% 88%, 21% 100%, 18% 88%, 15% 100%, 12% 88%, 9% 100%, 6% 88%, 3% 100%, 0 88%);
+  padding-bottom: 40px;
+  margin-top: -60px;
+  z-index: 3;
+}
+
+.headline-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: rgba(255,255,255,0.8);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.headline-main {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 700;
+  font-style: italic;
+  color: white;
+  line-height: 0.9;
+  margin-bottom: 8px;
+}
+
+.headline-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 28px;
+  letter-spacing: -1px;
+  color: rgba(255,255,255,0.9);
+  text-transform: uppercase;
+}
+
+/* Sticky notes scattered */
+.notes-scatter {
+  padding: 28px 18px 0;
+  position: relative;
+}
+
+.note-card {
+  background: white;
+  border-radius: 2px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  box-shadow: 2px 3px 10px rgba(0,0,0,0.08);
+  position: relative;
+}
+.note-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--pink);
+  border-radius: 2px 2px 0 0;
+}
+.note-card.yellow-note::before { background: var(--yellow-warm); }
+.note-card.sky-note::before { background: var(--sky-dark); }
+
+.note-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #B09080;
+  margin-bottom: 4px;
+}
+.note-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--black);
+}
+.note-sub {
+  font-size: 9px;
+  color: var(--gray);
+  margin-top: 2px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.notes-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Countdown */
+.countdown-wrap {
+  background: var(--black);
+  padding: 20px 18px;
+  text-align: center;
+  margin: 0 -0px;
+}
+
+.countdown-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: var(--pink);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.countdown-grid {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.cd-unit {
+  background: #2A1A10;
+  border: 1px solid #3A2A18;
+  padding: 10px 8px;
+  min-width: 60px;
+  text-align: center;
+  border-radius: 4px;
+}
+.cd-num {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--pink);
+  line-height: 1;
+  display: block;
+}
+.cd-lbl {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 7px;
+  letter-spacing: 1px;
+  color: #6A5A4A;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+.bday-msg {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-style: italic;
+  color: var(--pink);
+  text-align: center;
+  padding: 20px 18px;
+  display: none;
+}
+
+/* Ticker tape */
+.ticker-wrap {
+  background: var(--deep-pink);
+  overflow: hidden;
+  padding: 9px 0;
+  white-space: nowrap;
+}
+.ticker-inner {
+  display: inline-block;
+  animation: ticker 16s linear infinite;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: white;
+  text-transform: uppercase;
+}
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* RSVP quote section */
+.quote-section {
+  padding: 28px 18px;
+  background: var(--warm-white);
+  text-align: center;
+  position: relative;
+}
+.quote-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 72px;
+  color: var(--blush);
+  line-height: 0.5;
+  display: block;
+  margin-bottom: 8px;
+}
+.quote-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-style: italic;
+  color: var(--dark);
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+.quote-attr {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: var(--pink);
+  text-transform: uppercase;
+}
+
+.invite-btn {
+  display: block;
+  background: var(--pink);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  margin-top: 18px;
+  transition: background 0.2s;
+}
+.invite-btn:hover { background: var(--deep-pink); }
+
+/* ════════════════════════════════════
+   PAGE HEADER — Shared style (scrapbook)
+════════════════════════════════════ */
+.page-header {
+  background: var(--sky);
+  padding: 52px 20px 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0; right: 0;
+  height: 30px;
+  background: var(--cream);
+  clip-path: polygon(0 100%, 5% 0, 10% 100%, 15% 0, 20% 100%, 25% 0, 30% 100%, 35% 0, 40% 100%, 45% 0, 50% 100%, 55% 0, 60% 100%, 65% 0, 70% 100%, 75% 0, 80% 100%, 85% 0, 90% 100%, 95% 0, 100% 100%);
+}
+
+.page-header.pink-header { background: var(--pink); }
+.page-header.cream-header { background: var(--warm-white); border-bottom: 2px dashed var(--light-gray); }
+.page-header.dark-header { background: var(--black); }
+
+.page-header .eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: rgba(0,0,0,0.5);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.page-header.dark-header .eyebrow { color: var(--pink); }
+.page-header.pink-header .eyebrow { color: rgba(255,255,255,0.7); }
+
+.page-header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--black);
+  line-height: 0.9;
+}
+.page-header.dark-header h1 { color: white; }
+.page-header.pink-header h1 { color: white; }
+
+.page-header h1 em {
+  font-style: italic;
+  color: white;
+}
+.page-header.dark-header h1 em { color: var(--pink); }
+.page-header.sky-header h1 em { color: var(--deep-pink); }
+
+/* ════════════════════════════════════
+   AGENDA PAGE
+════════════════════════════════════ */
+#page-agenda { background: var(--cream); }
+
+.agenda-list {
+  padding: 30px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.agenda-item {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 0;
+  position: relative;
+}
+
+.agenda-time-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6px;
+}
+
+.time-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--pink);
+  border: 2px solid var(--cream);
+  box-shadow: 0 0 0 2px var(--pink);
+  flex-shrink: 0;
+}
+
+.time-line {
+  width: 2px;
+  flex: 1;
+  background: linear-gradient(to bottom, var(--pink), var(--blush));
+  min-height: 40px;
+  opacity: 0.5;
+}
+.agenda-item:last-child .time-line { display: none; }
+
+.agenda-card {
+  background: white;
+  border-left: 3px solid var(--pink);
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  margin-left: 10px;
+  border-radius: 0 6px 6px 0;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.15s;
+}
+.agenda-card:active { transform: scale(0.98); }
+
+.agenda-card-time {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--pink);
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+
+.agenda-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 4px;
+}
+
+.agenda-card-desc {
+  font-size: 10px;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+.agenda-emoji {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+/* ════════════════════════════════════
+   LOCATION PAGE
+════════════════════════════════════ */
+#page-location { background: var(--cream); }
+
+.map-container {
+  position: relative;
+  height: 260px;
+  background: #ddd;
+  overflow: hidden;
+}
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.map-overlay-label {
+  position: absolute;
+  top: 14px; left: 14px;
+  background: var(--pink);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 3px;
+  padding: 5px 12px;
+  z-index: 2;
+  border-radius: 20px;
+}
+
+.location-info { padding: 24px 18px; }
+
+.location-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 4px;
+  line-height: 1.1;
+}
+.location-name em { font-style: italic; color: var(--pink); }
+
+.location-address {
+  font-size: 10px;
+  color: #AAA;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.location-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 22px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.loc-detail-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--light-gray);
+}
+.loc-detail-row:last-child { border-bottom: none; }
+
+.loc-icon { font-size: 18px; flex-shrink: 0; }
+
+.loc-detail-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #BBB;
+  margin-bottom: 2px;
+}
+
+.loc-detail-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.gmaps-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--black);
+  color: white;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 18px;
+  width: 100%;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.gmaps-btn:hover { background: var(--deep-pink); }
+.gmaps-btn .arrow { font-size: 18px; }
+
+/* ════════════════════════════════════
+   TIMELINE PAGE
+════════════════════════════════════ */
+#page-timeline { background: var(--cream); }
+#page-timeline .page-header { background: var(--pink); }
+#page-timeline .page-header .eyebrow { color: rgba(255,255,255,0.7); }
+#page-timeline .page-header h1 { color: white; }
+#page-timeline .page-header h1 em { color: var(--black); }
+
+.timeline-wrap {
+  padding: 28px 18px 20px;
+  position: relative;
+}
+
+.tl-line {
+  position: absolute;
+  left: 38px;
+  top: 28px;
+  bottom: 20px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--pink), var(--blush));
+  opacity: 0.6;
+}
+
+.tl-item {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 0;
+  margin-bottom: 22px;
+  align-items: start;
+}
+
+.tl-year-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6px;
+}
+
+.tl-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--pink);
+  border: 3px solid var(--cream);
+  box-shadow: 0 0 0 2px var(--pink);
+  flex-shrink: 0;
+}
+
+.tl-year {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--pink);
+  margin-top: 5px;
+  text-align: center;
+}
+
+.tl-card {
+  background: white;
+  border-radius: 0 8px 8px 0;
+  border-left: 3px solid var(--blush);
+  padding: 12px 14px;
+  margin-left: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.tl-card.featured { border-left-color: var(--pink); }
+
+.tl-tag {
+  display: inline-block;
+  background: var(--blush);
+  color: var(--deep-pink);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 20px;
+  margin-bottom: 6px;
+}
+
+.tl-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 5px;
+}
+
+.tl-card-desc {
+  font-size: 10px;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+/* Gallery section inside timeline */
+.gallery-section {
+  padding: 20px 18px;
+  background: var(--warm-white);
+}
+
+.gallery-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.gallery-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--blush);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+}
+
+.gallery-slot {
+  aspect-ratio: 1;
+  background: var(--blush);
+  border-radius: 4px;
+  border: 2px dashed var(--pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.15s;
+}
+.gallery-slot:active { transform: scale(0.97); }
+.gallery-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+.gallery-slot .plus-icon {
+  font-size: 24px;
+  color: var(--pink);
+  opacity: 0.6;
+}
+.gallery-slot.has-img img { display: block; }
+.gallery-slot.has-img .plus-icon { display: none; }
+
+#file-input { display: none; }
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+  max-width: 92%;
+  max-height: 85vh;
+  border-radius: 4px;
+  object-fit: contain;
+}
+.lightbox-close {
+  position: absolute;
+  top: 20px; right: 20px;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  background: var(--pink);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+/* ════════════════════════════════════
+   WISHLIST PAGE
+════════════════════════════════════ */
+#page-wishlist { background: var(--cream); }
+
+.wish-grid {
+  padding: 28px 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wish-card {
+  background: white;
+  display: grid;
+  grid-template-columns: 48px 1fr 56px;
+  gap: 0;
+  align-items: stretch;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: transform 0.15s;
+}
+.wish-card:active { transform: scale(0.99); }
+
+.wish-num {
+  background: var(--blush);
+  color: var(--deep-pink);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wish-card.top-wish .wish-num {
+  background: var(--pink);
+  color: white;
+}
+
+.wish-body { padding: 12px 14px; }
+
+.wish-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 3px;
+}
+
+.wish-desc {
+  font-size: 10px;
+  color: var(--gray);
+  line-height: 1.5;
+}
+
+.wish-priority {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  display: inline-block;
+}
+.wish-priority.high { color: var(--deep-pink); }
+.wish-priority.med { color: #B09080; }
+
+.wish-emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  background: var(--warm-white);
+  border-left: 1px solid var(--light-gray);
+}
+
+.wish-closing {
+  background: var(--pink);
+  padding: 24px 18px;
+  text-align: center;
+  margin: 0 16px;
+  border-radius: 8px;
+}
+.wish-closing-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-style: italic;
+  color: white;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.wish-closing-attr {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+}
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.page.active .page-header,
+.page.active .agenda-list,
+.page.active .agenda-item,
+.page.active .timeline-wrap,
+.page.active .wish-grid,
+.page.active .location-info,
+.page.active .home-editorial,
+.page.active .masthead {
+  animation: fadeUp 0.35s ease forwards;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.7; }
+}
+.time-dot { animation: pulse-dot 2s ease-in-out infinite; }
+
+/* Scrapbook tape decorations */
+.tape {
+  display: inline-block;
+  background: rgba(252, 231, 243, 0.8);
+  padding: 4px 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8px;
+  letter-spacing: 1px;
+  transform: rotate(-1.5deg);
+  position: relative;
+}
+.tape::before, .tape::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 8px;
+  background: rgba(252, 231, 243, 0.5);
+}
+.tape::before { left: -4px; transform: skewY(2deg); }
+.tape::after { right: -4px; transform: skewY(-2deg); }
+
+/* Decorative dots/stars */
+.decor-star {
+  display: inline-block;
+  color: var(--pink);
+}
+
+</style>
+</head>
+<body>
+<div class="outer-frame">
+
+<!-- ─── PAGE: HOME ─── -->
+<div id="page-home" class="page active">
+
+  <!-- Magazine top nav bar -->
+  <div class="mag-topbar">
+    <span>05.11</span>
+    <span class="logo-text">АРИУНЗУЛ</span>
+    <span>2026</span>
+  </div>
+
+  <!-- Hero masthead with sky-blue editorial background -->
+  <div class="masthead">
+    <!-- Badge card like the ID card in reference -->
+    <div style="position:absolute; top:0; right:0; z-index:10; padding:14px 14px 0 0;">
+      <div class="badge-lanyard" style="margin:0 auto 0;"></div>
+      <div class="badge-card">
+        <div class="badge-card-top">YOU ARE<br>INVITED ♥</div>
+        <div class="badge-photo">🌸</div>
+        <div class="badge-name">Ц. АРИУНЗУЛ</div>
+        <div class="badge-date">May 11 · 2026</div>
+      </div>
+    </div>
+
+    <div class="pink-blob-2"></div>
+    <div class="masthead-title">IT'S<br>HER<br>BIRTDAY</div>
+    <div class="masthead-sub">✦ It’s her day ✦</div>
+    <div class="pink-blob"></div>
+  </div>
+
+  <!-- Editorial headline on pink torn paper -->
+  <div class="editorial-headline-wrap">
+    <div class="headline-eyebrow">✦ ХҮНДЭТ НАЙЗ ТАНЫГ ✦</div>
+    <div class="headline-main">Онцгой өдөртөө<br>урьж байна</div>
+    <div class="headline-name">Ц · Ариунзул</div>
+  </div>
+
+  <!-- Info notes scattered like scrapbook -->
+  <div class="notes-scatter">
+    <div class="notes-row">
+      <div class="note-card">
+        <div class="note-label">Огноо</div>
+        <div class="note-value">May 11</div>
+        <div class="note-sub">2026 · UTC+8</div>
+      </div>
+      <div class="note-card yellow-note">
+        <div class="note-label">Цаг</div>
+        <div class="note-value">19:00</div>
+        <div class="note-sub">PM</div>
+      </div>
+    </div>
+    <div class="notes-row">
+      <div class="note-card sky-note">
+        <div class="note-label">Хаана</div>
+        <div class="note-value" style="font-size:14px;">Spot+ Eat & Bar</div>
+        <div class="note-sub">Nomado Hotel</div>
+      </div>
+      <div class="note-card">
+        <div class="note-label">Dress Code</div>
+        <div class="note-value" style="font-size:16px;">Black&White</div>
+        <div class="note-sub">must wear skirt♥</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Countdown -->
+  <div class="countdown-wrap">
+    <div class="countdown-label">✦ Төрсөн өдөр хүртэл ✦</div>
+    <div class="countdown-grid" id="countdown-display">
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-days">--</span>
+        <div class="cd-lbl">Өдөр</div>
+      </div>
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-hours">--</span>
+        <div class="cd-lbl">Цаг</div>
+      </div>
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-mins">--</span>
+        <div class="cd-lbl">Минут</div>
+      </div>
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-secs">--</span>
+        <div class="cd-lbl">Секунд</div>
+      </div>
+    </div>
+    <div class="bday-msg" id="bday-msg">🎂 Төрсөн өдөр ЭХЭЛЛЭЭ!</div>
+  </div>
+
+  <!-- Scrolling ticker -->
+  <div class="ticker-wrap">
+    <span class="ticker-inner">
+      ✦ АРИУНЗУЛ ✦ BIRTHDAY QUEEN ✦ MAY 2026 ✦ ULAANBAATAR ✦ HAPPY BIRTHDAY ✦ АРИУНЗУЛ ✦ BIRTHDAY QUEEN ✦ MAY 2026 ✦ ULAANBAATAR ✦ HAPPY BIRTHDAY ✦ АРИУНЗУЛ ✦ BIRTHDAY QUEEN ✦ MAY 2026 ✦ ULAANBAATAR ✦ HAPPY BIRTHDAY ✦ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✦ АРИУНЗУЛ ✦ BIRTHDAY QUEEN ✦ MAY 2026 ✦ ULAANBAATAR ✦ HAPPY BIRTHDAY ✦ АРИУНЗУЛ ✦ BIRTHDAY QUEEN ✦ MAY 2026 ✦ ULAANBAATAR ✦ HAPPY BIRTHDAY ✦ АРИУНЗУЛ ✦ BIRTHDAY QUEEN ✦ MAY 2026 ✦ ULAANBAATAR ✦ HAPPY BIRTHDAY ✦
+    </span>
+  </div>
+
+  <!-- Quote / RSVP -->
+  <div class="quote-section">
+    <span class="quote-mark">"</span>
+    <div class="quote-text">Та хүрэлцэн ирж миний төрсөн өдрийг илүү дурсамжтай болгоорой 🎉</div>
+    <div class="quote-attr">✦ Happy vibes only✨ ✦</div>
+    <button class="invite-btn" onclick="showPage('agenda')">ХӨТӨЛБӨР ХАРАХ →</button>
+  </div>
+
+</div>
+
+<!-- ─── PAGE: AGENDA ─── -->
+<div id="page-agenda" class="page">
+  <div class="page-header">
+    <div class="eyebrow">✦ БАЯРЫН ✦</div>
+    <h1>Хөтөлбөр</h1>
+  </div>
+
+  <div class="agenda-list">
+    <div class="agenda-item">
+      <div class="agenda-time-col"><div class="time-dot"></div><div class="time-line"></div></div>
+      <div class="agenda-card">
+        <div class="agenda-emoji">🚪</div>
+        <div class="agenda-card-time">19:00</div>
+        <div class="agenda-card-title">Зочдыг хүрэлцэн ирнэ</div>
+        <div class="agenda-card-desc">Нийт зочид ирнэ. Welcome drinks, зураг авах зай бэлэн байна.</div>
+      </div>
+    </div>
+    <div class="agenda-item">
+      <div class="agenda-time-col"><div class="time-dot"></div><div class="time-line"></div></div>
+      <div class="agenda-card">
+        <div class="agenda-emoji">🎂</div>
+        <div class="agenda-card-time">19:30</div>
+        <div class="agenda-card-title">Үйл ажиллагаа эхэлнэ.</div>
+        <div class="agenda-card-desc">Мэндчилгээ, хөгжөөнт тоглоом 1.</div>
+      </div>
+    </div>
+    <div class="agenda-item">
+      <div class="agenda-time-col"><div class="time-dot"></div><div class="time-line"></div></div>
+      <div class="agenda-card">
+        <div class="agenda-emoji">🍽️</div>
+        <div class="agenda-card-time">20:00</div>
+        <div class="agenda-card-title">Оройн зоог барина</div>
+        <div class="agenda-card-desc">Шарсан хонины толгой болон таван цулын цуйван, айраг зэрэг багтсан.</div>
+      </div>
+    </div>
+    <div class="agenda-item">
+      <div class="agenda-time-col"><div class="time-dot"></div><div class="time-line"></div></div>
+      <div class="agenda-card">
+        <div class="agenda-emoji">🎁</div>
+        <div class="agenda-card-time">20:30</div>
+        <div class="agenda-card-title">Хөгжөөнт тоглоом 2</div>
+        <div class="agenda-card-desc">Сээр цохих, тэвгээр наадах болно.</div>
+      </div>
+    </div>
+    <div class="agenda-item">
+      <div class="agenda-time-col"><div class="time-dot"></div><div class="time-line"></div></div>
+      <div class="agenda-card">
+        <div class="agenda-emoji">💃</div>
+        <div class="agenda-card-time">21:00</div>
+        <div class="agenda-card-title">Бэлэг гардуулах</div>
+        <div class="agenda-card-desc">Бэлэг өгмөөр байгаа ч бэлгийн санаа байхгүй бол бэлэг хэсгийг үзээрэй.</div>
+      </div>
+    </div>
+    <div class="agenda-item">
+      <div class="agenda-time-col"><div class="time-dot"></div><div class="time-line"></div></div>
+      <div class="agenda-card">
+        <div class="agenda-emoji">📸</div>
+        <div class="agenda-card-time">21:30</div>
+        <div class="agenda-card-title">Photo Booth</div>
+        <div class="agenda-card-desc">Хамтдаа зураг авхуулах, дурсамжаа хадгалах. Props бэлэн байна!</div>
+      </div>
+    </div>
+    <div class="agenda-item">
+      <div class="agenda-time-col"><div class="time-dot"></div><div class="time-line"></div></div>
+      <div class="agenda-card">
+        <div class="agenda-emoji">🌙</div>
+        <div class="agenda-card-time">21:50</div>
+        <div class="agenda-card-title">Албан ёсны үйл ажиллагаа дуусна</div>
+        <div class="agenda-card-desc">Үргэлжлэх хөтөлбөрийг та бүхэн зохион байгуулж төрсөн өдрийн эзэнд гэнэтийн бэлэг барина уу.♥</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── PAGE: LOCATION ─── -->
+<div id="page-location" class="page">
+  <div class="page-header">
+    <div class="eyebrow">✦ БАЯРЫН ✦</div>
+    <h1>Байршил</h1>
+  </div>
+
+  <div class="map-container">
+    <div class="map-overlay-label">✦ VENUE</div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2672.1234567890!2d106.8910928!3d47.9183169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96934de6b8fa57%3A0xd5453a0b29fc7453!2sSpot%2B%20Eat%20%26%20Bar%20at%20Nomado%20Hotel!5e0!3m2!1sen!2smn!4v1700000000000!5m2!1sen!2smn"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <div class="location-info">
+    <div class="location-name">Spot+ Eat & Bar<br><em>Nomado Hotel</em></div>
+    <div class="location-address">Амарсайханы гудамж 48-2, BGD-16 хороо, Улаанбаатар</div>
+
+    <div class="location-details">
+      <div class="loc-detail-row">
+        <div class="loc-icon">📍</div>
+        <div>
+          <div class="loc-detail-label">Хаяг</div>
+          <div class="loc-detail-value">Амарсайханы гудамж 48-2, BGD-16 хороо</div>
+        </div>
+      </div>
+      <div class="loc-detail-row">
+        <div class="loc-icon">🕕</div>
+        <div>
+          <div class="loc-detail-label">Цаг</div>
+          <div class="loc-detail-value">17:30 — 22:00</div>
+        </div>
+      </div>
+            <div class="loc-detail-row" style="border-bottom:none;">
+        <div class="loc-icon">📞</div>
+        <div>
+          <div class="loc-detail-label">Холбоо барих</div>
+          <div class="loc-detail-value">+976 7777-7769</div>
+        </div>
+      </div>
+    </div>
+
+    <a class="gmaps-btn" href="https://maps.app.goo.gl/fGhK1DtpCMKbg1Tt7" target="_blank">
+      <span>📍</span>
+      <span>GOOGLE MAPS-ТЭЙ ХОЛБОГДОХ</span>
+      <span class="arrow">↗</span>
+    </a>
+  </div>
+</div>
+
+<!-- ─── PAGE: TIMELINE / АМЬДРАЛ ─── -->
+<div id="page-timeline" class="page">
+  <div class="page-header pink-header">
+    <div class="eyebrow">✦ Түүний ✦</div>
+    <h1>Амьдралын Түүх<br><em>↓</em></h1>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="tl-line"></div>
+
+    <div class="tl-item">
+      <div class="tl-year-col"><div class="tl-dot"></div><div class="tl-year">2007</div></div>
+      <div class="tl-card">
+        <div class="tl-tag">✦ ТӨРСӨН</div>
+        <div class="tl-card-title">🌸Энэ дэлхийд мэндлэв</div>
+        <div class="tl-card-desc">Гэр бүлдээ аз жаргал авчирсан хамгийн нандин өдөр.
+    Бяцхан гүнж мэндэлж, инээд хөөрөөр гэрээ гэрэлтүүлсэн.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year-col"><div class="tl-dot"></div><div class="tl-year">2013</div></div>
+      <div class="tl-card">
+        <div class="tl-tag">✦ СУРГУУЛЬ</div>
+        <div class="tl-card-title">📚 Сургуульд оров</div>
+        <div class="tl-card-desc">Мөрөөдөл рүүгээ хийсэн анхны алхмаа сургуульдаа эхлүүлж, мэдлэг, нөхөрлөл, дурсамжаар дүүрэн 12 жилийн аялал нь ийнхүү эхэлсэн.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year-col"><div class="tl-dot"></div><div class="tl-year">2014</div></div>
+      <div class="tl-card">
+        <div class="tl-tag">✦ ХОББИ</div>
+        <div class="tl-card-title">🎨Хүсэл мөрөөдлөө олов</div>
+        <div class="tl-card-desc">Сургуульд орсон цагаасаа эхлэн бусдаас ялгарч, урлагт татагдан орж, бүтээлч сэтгэлгээ нь улам бүр цэцэглэн хөгжиж байв.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year-col"><div class="tl-dot"></div><div class="tl-year">2017</div></div>
+      <div class="tl-card">
+        <div class="tl-tag">✦ АМЖИЛТ</div>
+        <div class="tl-card-title">🏆 Амжилт ба нийгмийн идэвх</div>
+        <div class="tl-card-desc">Тэрээр өөрийн дуртай зүйлсээрээ олон тэмцээн, уралдаанд оролцож амжилт гаргахаас гадна нийгмийн идэвхтэн болов.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year-col"><div class="tl-dot"></div><div class="tl-year">2019</div></div>
+      <div class="tl-card">
+        <div class="tl-tag">✦ НАЙЗУУД</div>
+        <div class="tl-card-title">👯 Олон сайхан хүмүүстэй учрав</div>
+        <div class="tl-card-desc">Энэ өдөр хүрэлцэн ирж буй буй бид нар түүний амьдралд гэрэл болж орж ирсэн юм♥</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year-col"><div class="tl-dot"></div><div class="tl-year">2025</div></div>
+      <div class="tl-card">
+        <div class="tl-tag">✦ ИХ СУРГУУЛЬ</div>
+        <div class="tl-card-title">🎓 Их сургуульд оров</div>
+        <div class="tl-card-desc">Хүссэн мэргэжлээрээ мөрөөдлийнхөө төлөө суралцаж, илүү их гэрэлтэж эхэллээ.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year-col"><div class="tl-dot"></div><div class="tl-year">2026</div></div>
+      <div class="tl-card featured">
+        <div class="tl-tag" style="background:var(--pink); color:white;">✦ ӨНӨӨДӨР</div>
+        <div class="tl-card-title">🎂 Тэмдэглэлт өдөр!</div>
+        <div class="tl-card-desc">Өнөөдөр бол түүний нэг нас нэмэх ганцхан тохиох өдөр✦</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Photo Gallery -->
+  <div class="gallery-section">
+    <div class="gallery-label">✦ Зургийн цомог</div>
+    <div class="gallery-grid" id="gallery-grid">
+      <div class="gallery-slot" onclick="triggerUpload(0)"><span class="plus-icon">+</span></div>
+      <div class="gallery-slot" onclick="triggerUpload(1)"><span class="plus-icon">+</span></div>
+      <div class="gallery-slot" onclick="triggerUpload(2)"><span class="plus-icon">+</span></div>
+      <div class="gallery-slot" onclick="triggerUpload(3)"><span class="plus-icon">+</span></div>
+      <div class="gallery-slot" onclick="triggerUpload(4)"><span class="plus-icon">+</span></div>
+      <div class="gallery-slot" onclick="triggerUpload(5)"><span class="plus-icon">+</span></div>
+    </div>
+    <input type="file" id="file-input" accept="image/*">
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <div class="lightbox-close">✕</div>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<!-- ─── PAGE: WISHLIST ─── -->
+<div id="page-wishlist" class="page">
+  <div class="page-header">
+    <div class="eyebrow">✦ ТҮҮНИЙ ✦</div>
+    <h1>Хүслийн<br><em>жагсаалт</em></h1>
+  </div>
+
+  <div class="wish-grid">
+
+    <div class="wish-card top-wish">
+      <div class="wish-num">01</div>
+      <div class="wish-body">
+        <div class="wish-title">Үнэртэй ус</div>
+        <div class="wish-desc">Dior-Jadore, Tom Ford-Lost cherry, Vistoria secret-Bombshell, Chanel-Ногоон, Гол нь тосон сүрчиг шүү!!😅</div>
+        <div class="wish-priority high">★ TOP WISH</div>
+      </div>
+      <div class="wish-emoji">🌹</div>
+    </div>
+
+    <div class="wish-card top-wish">
+      <div class="wish-num">02</div>
+      <div class="wish-body">
+        <div class="wish-title">Арьс арчилгаа</div>
+        <div class="wish-desc">Beplain-Mung bean cleanser, Anua-Azelic acid serum, 345 cream.</div>
+        <div class="wish-priority high">★ TOP WISH</div>
+      </div>
+      <div class="wish-emoji">✨</div>
+    </div>
+
+    <div class="wish-card top-wish">
+      <div class="wish-num">03</div>
+      <div class="wish-body">
+        <div class="wish-title">Jewelry</div>
+        <div class="wish-desc">Ring, Цаг, Necklace, Piercing, Бугуйвч, Ээмэг</div>
+        <div class="wish-priority high">★ TOP WISH</div>
+      </div>
+      <div class="wish-emoji">💎</div>
+    </div>
+
+    <div class="wish-card">
+      <div class="wish-num">04</div>
+      <div class="wish-body">
+        <div class="wish-title">Calimba</div>
+        <div class="wish-desc">Эрхий хуруугаараа тоглодог жижиг хэмжээний хөгжмийн зэмсэг</div>
+        <div class="wish-priority med">✦ WISH</div>
+      </div>
+      <div class="wish-emoji">🎼</div>
+    </div>
+
+    <div class="wish-card">
+      <div class="wish-num">05</div>
+      <div class="wish-body">
+        <div class="wish-title">Хувцас</div>
+        <div class="wish-desc">Надад зохино гэж бодож байвал юу ч байсан болно доо 😭 (Y2K ч юм уу, polka dot энэ тэр байвал бүр гоё ахаха.</div>
+        <div class="wish-priority med">✦ WISH</div>
+      </div>
+      <div class="wish-emoji">👗</div>
+    </div>
+
+    <div class="wish-card">
+      <div class="wish-num">06</div>
+      <div class="wish-body">
+        <div class="wish-title">Цүнх</div>
+        <div class="wish-desc">Трэнд болж байгаа ч юм уу хаха😝</div>
+        <div class="wish-priority med">✦ WISH</div>
+      </div>
+      <div class="wish-emoji">👜</div>
+    </div>
+
+    <div class="wish-card">
+      <div class="wish-num">07</div>
+      <div class="wish-body">
+        <div class="wish-title">Make up products</div>
+        <div class="wish-desc">Contour, Blush, Gloss, Lip tint, Primer, Foundation.</div>
+        <div class="wish-priority med">✦ WISH</div>
+      </div>
+      <div class="wish-emoji">💄</div>
+    </div>
+
+    <div class="wish-closing">
+      <div class="wish-closing-quote">"Гэхдээ чиний хүрэлцэн ирэх нь өөрөө бэлэг юм шүү."</div>
+      <div class="wish-closing-attr">✦ Ариунзул ✦</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ─── BOTTOM NAV ─── -->
+<nav>
+  <a href="#" class="active" id="nav-home" onclick="return showPage('home')">
+    <span class="icon">🎀</span>
+    Урилга
+  </a>
+  <a href="#" id="nav-agenda" onclick="return showPage('agenda')">
+    <span class="icon">📋</span>
+    Хөтөлбөр
+  </a>
+  <a href="#" id="nav-location" onclick="return showPage('location')">
+    <span class="icon">📍</span>
+    Байршил
+  </a>
+  <a href="#" id="nav-timeline" onclick="return showPage('timeline')">
+    <span class="icon">⭐</span>
+    Амьдрал
+  </a>
+  <a href="#" id="nav-wishlist" onclick="return showPage('wishlist')">
+    <span class="icon">🎁</span>
+    Бэлэг
+  </a>
+</nav>
+
+</div><!-- /outer-frame -->
+
+<script>
+// ─── PAGE NAVIGATION ───
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+  document.getElementById('page-' + name).classList.add('active');
+  document.getElementById('nav-' + name).classList.add('active');
+  window.scrollTo(0, 0);
+  return false;
+}
+
+// ─── COUNTDOWN (UTC+8, 2026-05-11 00:00) ───
+function updateCountdown() {
+  const target = new Date('2026-05-11T00:00:00+08:00');
+  const now = new Date();
+  const diff = target - now;
+
+  const display = document.getElementById('countdown-display');
+  const msg = document.getElementById('bday-msg');
+
+  if (diff <= 0) {
+    display.style.display = 'none';
+    msg.style.display = 'block';
+    return;
+  }
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+  document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+  document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+  document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+  document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// ─── GALLERY UPLOAD ───
+let currentSlot = null;
+const galleryImages = {};
+
+function triggerUpload(slotIndex) {
+  currentSlot = slotIndex;
+  const fileInput = document.getElementById('file-input');
+  fileInput.onchange = function(e) {
+    if (!e.target.files[0]) return;
+    const reader = new FileReader();
+    reader.onload = function(ev) {
+      galleryImages[currentSlot] = ev.target.result;
+      const slots = document.querySelectorAll('.gallery-slot');
+      const slot = slots[currentSlot];
+      let img = slot.querySelector('img');
+      if (!img) {
+        img = document.createElement('img');
+        slot.appendChild(img);
+      }
+      img.src = ev.target.result;
+      slot.classList.add('has-img');
+      // Click to open lightbox after upload
+      slot.onclick = () => openLightbox(ev.target.result);
+    };
+    reader.readAsDataURL(e.target.files[0]);
+    fileInput.value = '';
+  };
+  fileInput.click();
+}
+
+function openLightbox(src) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox').classList.add('open');
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+}
+</script>
+</body>
+</html>
